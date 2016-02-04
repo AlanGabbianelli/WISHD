@@ -9,29 +9,28 @@ var tenMins = document.getElementById("tenMins"),
 
 
 function checkTime(i) {
-    if (i < 10) {i = "0" + i};
+    if (i < 10) { i = "0" + i; }
     return i;
-};
+}
 
 
 
 function addTime() {
   thisSiteMins++;
   thisSiteMins = checkTime(thisSiteMins);
-  document.getElementById("mins").innerHTML = thisSiteMins
-  setTimeout(addTime, 60000)
-};
+  document.getElementById("mins").innerHTML = thisSiteMins;
+  setTimeout(addTime, 60000);
+}
 
 
 
 
 
 function hide(element) {
-  element.className += "hidden"
+  element.className += "hidden";
 }
 
 
 function show(element) {
   element.classList.remove("hidden");
-
 }
