@@ -4,18 +4,33 @@
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="animations.js"></script>
   </head>
-  <body onload="keepTime()">
+  <body>
     <header>
       <h1 class="lobster">W.I.S.H.'D.</h1>
     </header>
     <div class="main" role="main">
+      <div id="headings">
       <h1>YOU HAVE SPENT
-      <span id="timer" class="lobster green"></span>
+      <span id="fb-timer" class="lobster green"></span>
       MINUTES ON FACEBOOK</h1>
       <br>
-      <h2>HERE IS WHAT YOU SHOULD HAVE DONE</h2>
+    </div>
+
+      <ul class="sugesstions hidden" id="zero-time-wasted">
+        <li><h1>CONGRATULATIONS YOU HAVE WASTED NO TIME ON FACEBOOK</h1>
+        </li>
+        <br>
+        <li><h2>BUT YOU <strong>HAVE</strong> WASTED <span id="wishd-time" class="lobster"></span> MINUTES ON HERE</h2>
+        </li>
+        <br>
+      </ul>
+
 
       <ul class="suggestions" id="tenMins">
+        <h2>HERE IS WHAT YOU SHOULD HAVE DONE:</h2>
+        <br>
+        <li><a href="http://www.buzzfeed.com/erinlarosa/ways-to-be-as-american-as-ron-swanson#.bu5enZVdB">TRIED TO BE MORE LIKE RON SWANSON</a>
+        </li>
         <li>
           <a href="https://www.virginmoneylondonmarathon.com/en-gb/how-to-enter/">ENTERED THE LONDON MARATHON</a>
         </li>
@@ -28,29 +43,42 @@
         <li>
           <a href="https://www.youtube.com/watch?v=I_izvAbhExY">LISTENED TO STAYIN' ALIVE BY THE BEGEES 2.48756 TIMES</a>
         </li>
-        <li>
+        <li><a href="https://www.gotinder.com/">SWIPED TINDER ABOUT 600 TIMES</a>
         </li>
       </ul>
 
       <ul class="suggestions hidden" id="thirtyMins">
+        <h2>HERE IS WHAT YOU SHOULD HAVE DONE:</h2>
+        <br>
+        <li><a href="http://www.buzzfeed.com/erinlarosa/ways-to-be-as-american-as-ron-swanson#.bu5enZVdB">TRIED TO BE MORE LIKE RON SWANSON</a>
+        </li>        
         <li><a href="https://www.kickstarter.com/?ref=nav">FUNDED THE NEXT MARK ZUCKERBERG</a>
         </li>
-        <li>
+        <li><a href="http://www.skype.com/en/">CALLED YOUR PARENTS AND GRANDPARENTS</a>
+        </li>
+        <li> <a href="http://www.boredpanda.com/diy-cutting-board-bird-feeder/">BUILT A DIY CUTTING BOARD BIRD FEEDER</a>
         </li>
       </ul>
 
       <ul class="suggestions hidden" id="oneHour">
-        <li><a href="">GONE ONE STATION ON THE TUBE</a>
+        <h2>HERE IS WHAT YOU SHOULD HAVE DONE:</h2>
+        <br>
+        <li><a href="http://www.buzzfeed.com/erinlarosa/ways-to-be-as-american-as-ron-swanson#.bu5enZVdB">TRIED TO BE MORE LIKE RON SWANSON</a>
         </li>
-        <li><a href="http://www.cyclingweekly.co.uk/tag/hour-record">BROKEN A RECORD</a>
+        <li><a href="http://www.cyclingweekly.co.uk/tag/hour-record">BROKEN A WORLD RECORD</a>
         </li>
-        <li><a href="http://ladydinahs.com/?ref=driverlayer.com">EMBRACED</a> <a href="#">YOUR INNER HIPSTER</a>
+        <li><a href="http://ladydinahs.com/?ref=driverlayer.com">HAD A COFFEE. WITH CATS.</a>
+        </li>
+        <li><a href="https://www.youtube.com/watch?v=ECxYJcnvyMw">DONE SOME EXERCISE</a>
+        </li>
+        <li><a href="http://www.futurenow.su/en/view_article/152/">BUILT A SPOON LAMP</a>
         </li>
       </ul>
 
+
     </div>
     <footer>
-      <p>AND <span id="mins" class="lobster"></span> MINUTES ON THIS WEBSITE. SERIOUSLY</p>
+      <p>AND <span id="footer-timer" class="lobster"></span> MINUTES ON THIS WEBSITE. SERIOUSLY</p>
     </footer>
   </body>
 </html>

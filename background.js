@@ -10,12 +10,12 @@ chrome.runtime.onMessage.addListener(function(response, sender, sendResponse) {
 });
 
 function saveFB(){
-  var facebook = new Date()/1000;
+  var facebook = new Date().getTime();
   localStorage.setItem('FBtime', facebook);
 }
 
 function saveTW(){
-  var twitter = new Date()/1000;
+  var twitter = new Date().getTime();
   localStorage.setItem('TWtime', twitter);
 }
 

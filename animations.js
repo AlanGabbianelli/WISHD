@@ -1,11 +1,29 @@
+
 var tenMinsSuggestions = document.getElementById("tenMins"),
     thirtyMinsSuggestions = document.getElementById("thirtyMins"),
     oneHourSuggestions = document.getElementById("oneHour"),
-    originEndTime = new Date().getTime(),
-    originStartTime = localStorage.getItem("FBtime"),
-    thisPageStartTime = originEndTime - originStartTime,
-    mins = Math.floor(thisPageStartTime/60)-1,
+    congrats = document.getElementById("zero-time-wasted"),
+    FbEndTime,
+    FbStartTime,
+    FbTime,
+    FbMins,
     thisSiteMins = -1;
+
+
+ window.onload = function(){
+  setFbTime();
+  FbTimer();
+  keepTime();
+ }
+
+
+
+function setFbTime(){
+  FbEndTime = new Date().getTime();
+  FbStartTime = localStorage.getItem("FBtime");
+  FbTime = FbEndTime - FbStartTime;
+   FbMins = (Math.round(FbTime/1000/60));
+}
 
 function checkTime(i) {
     if (i < 10) { i = "0" + i; }
@@ -24,22 +42,26 @@ function showOneHour(){
 
 function keepTime() {
   thisSiteMins++;
-  if(thisSiteMins===1) showThirtyMins();
-  if(thisSiteMins===2) showOneHour();
-  thisSiteMins = checkTime(thisSiteMins);
-  document.getElementById("mins").innerHTML = thisSiteMins;
-  setTimeout(addTime, 60000);
+  thisSiteMins = checkTime(thisSiteMins)
+  document.getElementById("footer-timer").innerHTML = thisSiteMins;
+  document.getElementById("wishd-time").innerHTML = thisSiteMins;
+  setTimeout(keepTime, 1000);
+};
+
+function showCongrats(){
+  hide("tenMins")
+  hide("headings");
+  show("zero-time-wasted");
 }
 
-function hide(element) {
-  element.className += "hidden";
+function FbTimer(){
+  if(FbMins===0) showCongrats();
+  if(FbMins===2) showThirtyMins();
+  if(FbMins===3) showOneHour();
+  FbMins = checkTime(FbMins)
+  document.getElementById("fb-timer").innerHTML = FbMins;
 }
 
-function show(element) {
-  element.classList.remove("hidden");
-  document.getElementById("mins").innerHTML = thisSiteMins;
-  setTimeout(keepTime, 6000);
-}
 
 function hide(item) {
   document.getElementById(item).className += " hidden";
