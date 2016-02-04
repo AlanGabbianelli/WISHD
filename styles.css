@@ -101,7 +101,6 @@ footer {
 }
 
 
-
 a {
   text-decoration: none;
   color: #232d2c;
@@ -115,17 +114,18 @@ a:link {
 
 a:visited {
     text-decoration: none;
-    color: #42C1D9;
+    color: #232d2c;
 }
 
 a:hover {
     text-decoration: none;
-    color: #232d2c;
+    color: #42C1D9;
     font-size: 2em;
 }
 
 a:active {
     text-decoration: none;
+    color: #232d2c;
 }
 
 
@@ -133,6 +133,9 @@ h2 {
   font-size: 2em;
 }
 
+#wishd-time:hover {
+  font-size: 2em;
+}
 
 #timer {
 /*  font-size: 3em;*/
