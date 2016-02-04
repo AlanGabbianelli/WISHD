@@ -2,58 +2,77 @@ chrome.runtime.sendMessage(document.getElementsByTagName('title')[0].innerText);
 
 var block = document.getElementsByTagName('div');
 var i = 1;
+var colors = ['red', 'green', 'yellow', 'blue', 'purple', 'black', 'white', 'orange'];
 
 var img = new Image();
 img.src = 'https://scontent-mrs1-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/208178_17291872696_7674_n.jpg?oh=f1ac463e3cfc1d77495964c14923890f&oe=573F11E9';
 
+
+
 function richify() {
   setTimeout(function() {
-    block[i].appendChild(img);
-  }, 12000);
+    var y = 1;
+    block[y].appendChild(img);
+    y+=1;
+    richify();
+  }, 100);
 }
-  richify();
 
-function changeBackground() {
-   setTimeout(function () {
-    if (i % 2 === 0) {
-      block[i].style.backgroundColor = "red";
-      document.getElementsByTagName('body')[0].style.backgroundColor = "red";
-    } else {
-      block[i].style.backgroundColor = "purple";
-    }
+function richifyTrigger() {
+  setTimeout(function (){
+    richify();
+  }, 60000);
+}
+
+function lightTrigger() {
+  setTimeout(function (){
+    lights();
+  }, 50000);
+}
+
+function captionTrigger() {
+  setTimeout(function (){
+    captions();
+  }, 25000);
+}
+
+function lights() {
+  setTimeout(function(){
+    block[i].style.backgroundColor = colors[Math.floor(Math.random()*go.length)];
+    document.getElementsByTagName('body')[0].style.backgroundColor = colors[Math.floor(Math.random()*go.length)];
     i+= 1;
-    if (i < 1000) {
-      wrapper(20000);
-      changeBackground();
-      myLoop();
-    }
-  }, 10000);
+    lights();
+  }, 300);
 }
 
-changeBackground();
+var c = 0;
+function captions() {
+   setTimeout(function () {
+     var node = document.createElement("H1");
+     var textnode = document.createTextNode(go[Math.floor(Math.random()*go.length)]);
+     node.appendChild(textnode);
+     block[c].appendChild(node);
+     c+= 5;
+     captions();
+   }, 300);
+}
+
+richifyTrigger();
+wrapper(15000);
+captionTrigger();
+lightTrigger();
+
+var go = ['take a good look at yourself in the mirror', 'you know this isnt actually fun', 'go on a date', 'ride a bike', 'get a life', 'learn spanish', 'grow up', 'do something worth a damn', 'walk your dog', 'get a dog', 'move to japan', 'go to the gym', 'make some real friends', 'call your parents', 'make a painting', 'stop wasting your time', 'learn how to code', 'get off your ass', 'find yourself', 'go get a snow cone with your kid', 'meditate', 'read a book', 'go for a jog'];
 
 function wrapper(iteration){
   setTimeout(function() {
-    alert('you should really think about doing something else');
-
-    if(iteration === 1000) {wrapper(1000);}
-    else{wrapper(iteration-200);}
+    alert("Are you sure you don't have anything better to do?");
+    if(iteration <= 1000) {return;}
+    else{wrapper(iteration-3000);}
   }, iteration);
 }
 
-function myLoop () {
-   setTimeout(function () {
-     var node = document.createElement("H1");
-     var textnode = document.createTextNode("Go do something worth a damn!!");
-     node.appendChild(textnode);
-     block[i].appendChild(node);
-      i+= 5;
 
-      if (i < 1000) {
-         myLoop();
-      }
-   }, 3000);
-}
 
 
 
