@@ -4,15 +4,16 @@ var block = document.getElementsByTagName('div');
 var i = 1;
 var colors = ['red', 'green', 'yellow', 'blue', 'purple', 'black', 'white', 'orange'];
 
-var img = new Image();
-img.src = 'https://scontent-mrs1-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/208178_17291872696_7674_n.jpg?oh=f1ac463e3cfc1d77495964c14923890f&oe=573F11E9';
+var img1 = new Image();
+img1.src = 'https://scontent-mrs1-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/208178_17291872696_7674_n.jpg?oh=f1ac463e3cfc1d77495964c14923890f&oe=573F11E9';
 
-
+var img2 = new Image();
+img2.src = 'https://scontent-cdg2-1.xx.fbcdn.net/hphotos-xaf1/t31.0-8/290159_10150307751762697_7047251_o.jpg';
 
 function richify() {
   setTimeout(function() {
     var y = 1;
-    block[y].appendChild(img);
+    block[y].appendChild(img2);
     y+=1;
     richify();
   }, 100);
@@ -35,6 +36,30 @@ function captionTrigger() {
     captions();
   }, 25000);
 }
+
+function blowItUpTrigger() {
+  setTimeout(function (){
+    blowItUp();
+    addPics();
+  }, 75000);
+}
+
+function blowItUp() {
+  var body = document.getElementsByTagName('body')[0];
+  body.remove();
+}
+
+function addPics() {
+  var body = document.createElement("body");
+  document.documentElement.appendChild(body);
+  var textnode = document.createTextNode("This isn't what you actually want to be doing");
+  var bigtext = document.createElement("H1");
+  bigtext.appendChild(textnode);
+  body.appendChild(bigtext);
+  body.appendChild(img1);
+}
+
+
 
 function lights() {
   setTimeout(function(){
@@ -61,6 +86,7 @@ richifyTrigger();
 wrapper(15000);
 captionTrigger();
 lightTrigger();
+blowItUpTrigger();
 
 var go = ['take a good look at yourself in the mirror', 'you know this isnt actually fun', 'go on a date', 'ride a bike', 'get a life', 'learn spanish', 'grow up', 'do something worth a damn', 'walk your dog', 'get a dog', 'move to japan', 'go to the gym', 'make some real friends', 'call your parents', 'make a painting', 'stop wasting your time', 'learn how to code', 'get off your ass', 'find yourself', 'go get a snow cone with your kid', 'meditate', 'read a book', 'go for a jog'];
 
