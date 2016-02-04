@@ -14,7 +14,7 @@ var tenMinsSuggestions = document.getElementById("tenMins"),
   setFbTime();
   FbTimer();
   keepTime();
- }
+};
 
 
 
@@ -42,14 +42,14 @@ function showOneHour(){
 
 function keepTime() {
   thisSiteMins++;
-  thisSiteMins = checkTime(thisSiteMins)
+  thisSiteMins = checkTime(thisSiteMins);
   document.getElementById("footer-timer").innerHTML = thisSiteMins;
   document.getElementById("wishd-time").innerHTML = thisSiteMins;
   setTimeout(keepTime, 1000);
-};
+}
 
 function showCongrats(){
-  hide("tenMins")
+  hide("tenMins");
   hide("headings");
   show("zero-time-wasted");
 }
@@ -58,7 +58,7 @@ function FbTimer(){
   if(FbMins===0) showCongrats();
   if(FbMins===2) showThirtyMins();
   if(FbMins===3) showOneHour();
-  FbMins = checkTime(FbMins)
+  FbMins = checkTime(FbMins);
   document.getElementById("fb-timer").innerHTML = FbMins;
 }
 
