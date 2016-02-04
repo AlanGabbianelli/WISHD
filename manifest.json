@@ -7,7 +7,9 @@
   "background": { "scripts":["background.js"] },
   "content_scripts": [
     {
-      "matches": [ "https://www.facebook.com/*", "https://twitter.com/*"],
+      "matches": [
+  "<all_urls>"
+],
       "js": ["content.js"]
     }
 ]}
