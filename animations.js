@@ -7,13 +7,10 @@ var tenMins = document.getElementById("tenMins"),
     mins = Math.floor(thisPageStartTime/60)-1,
     thisSiteMins = -1;
 
-
 function checkTime(i) {
     if (i < 10) { i = "0" + i; }
     return i;
 }
-
-
 
 function addTime() {
   thisSiteMins++;
@@ -22,14 +19,9 @@ function addTime() {
   setTimeout(addTime, 60000);
 }
 
-
-
-
-
 function hide(element) {
   element.className += "hidden";
 }
-
 
 function show(element) {
   element.classList.remove("hidden");
