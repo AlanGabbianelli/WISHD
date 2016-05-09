@@ -1,3 +1,7 @@
+# Get it now
+## Available on the Chrome Store
+### https://chrome.google.com/webstore/detail/ggpblidjdglljceailhjafanihedolkk/publish-accepted?authuser=0
+
 WHAT I SHOULD HAVE DONE
 =======================
 
@@ -13,9 +17,6 @@ So that I can not waste time,
 I want to be able to quantify the time I spend online.
 ```
 
-# Get it now
-## Available on the Chrome Store
-### https://chrome.google.com/webstore/detail/ggpblidjdglljceailhjafanihedolkk/publish-accepted?authuser=0
 
 User Stories
 ------------
@@ -70,7 +71,6 @@ Authors
 
 Additions
 ----------
-- Add WISHD to chrome store
 - Extend monitored websites based on user input
 - Introduce monetary incentives to reduce wasting time
 - Allow groups to compete in wasting the least amount of time, prize based
