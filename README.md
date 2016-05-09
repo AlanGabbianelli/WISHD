@@ -39,3 +39,6 @@ As time waster
 So that I can optomise my time online,
 I would like to be able to set time limits on those websites.
 ```
+# Get it now
+## Available on the Chrome Store
+### https://chrome.google.com/webstore/detail/ggpblidjdglljceailhjafanihedolkk/publish-accepted?authuser=0
