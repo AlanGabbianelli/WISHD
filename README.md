@@ -13,6 +13,10 @@ So that I can not waste time,
 I want to be able to quantify the time I spend online.
 ```
 
+# Get it now
+## Available on the Chrome Store
+### https://chrome.google.com/webstore/detail/ggpblidjdglljceailhjafanihedolkk/publish-accepted?authuser=0
+
 User Stories
 ------------
 
@@ -39,6 +43,3 @@ As time waster
 So that I can optomise my time online,
 I would like to be able to set time limits on those websites.
 ```
-# Get it now
-## Available on the Chrome Store
-### https://chrome.google.com/webstore/detail/ggpblidjdglljceailhjafanihedolkk/publish-accepted?authuser=0
