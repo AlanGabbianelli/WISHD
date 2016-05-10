@@ -1,6 +1,6 @@
 ## Get it now
 ### Available on the Chrome Store
-#### https://chrome.google.com/webstore/detail/ggpblidjdglljceailhjafanihedolkk/publish-accepted?authuser=0
+#### https://goo.gl/pV83F8
 
 WHAT I SHOULD HAVE DONE
 =======================
